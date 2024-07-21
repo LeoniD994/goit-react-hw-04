@@ -1,0 +1,39 @@
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Modal {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.CloseButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  color: rgb(15, 15, 32);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.CloseButton:hover {
+  background: #ff4c4c;
+}
