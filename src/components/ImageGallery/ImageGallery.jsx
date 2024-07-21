@@ -1,25 +1,20 @@
+import PropTypes from "prop-types";
+import ImageCard from "./ImageCard";
 import styles from "./ImageGallery.module.css";
 
 const ImageGallery = ({ images, onImageClick }) => {
   return (
     <ul className={styles.gallery}>
       {images.map((image) => (
-        <li
-          key={image.id}
-          className={styles.item}
-          onClick={() => onImageClick(image)}
-        >
-          <div className={styles.card}>
-            <img
-              src={image.urls.small}
-              alt={image.alt_description}
-              className={styles.image}
-            />
-          </div>
-        </li>
+        <ImageCard key={image.id} image={image} onClick={onImageClick} />
       ))}
     </ul>
   );
+};
+
+ImageGallery.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onImageClick: PropTypes.func.isRequired,
 };
 
 export default ImageGallery;
